@@ -73,7 +73,7 @@
         {
             "type": "Action.OpenUrl",
             "title": "Mehr Informationen",
-            "url": "neu.rzlsoftware.at"
+            "url": "https://neu.rzlsoftware.at/news/news"
         }
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
