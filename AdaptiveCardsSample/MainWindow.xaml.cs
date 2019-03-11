@@ -2,6 +2,7 @@
 using AdaptiveCards.Rendering;
 using AdaptiveCards.Rendering.Wpf;
 using Microsoft.Win32;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
@@ -42,14 +43,22 @@ namespace AdaptiveCardsSample
             // renderer.UseXceedElementRenderers();
 
             var json = LoadJson();
+            grid1.Children.Clear();
+            if (json is "")
+                return;
+
             var result = AdaptiveCard.FromJson(json);
             var renderedCard = renderer.RenderCard(result.Card);
             renderedCard.OnAction += (card, args) =>
             {
-
+                switch (args.Action)
+                {
+                    case AdaptiveOpenUrlAction openUrlAction:
+                        Process.Start(openUrlAction.Url.ToString());
+                        break;
+                }
             };
 
-            grid1.Children.Clear();
             grid1.Children.Add(renderedCard.FrameworkElement);
         }
 
