@@ -5,6 +5,15 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdaptiveCardsSample", "AdaptiveCardsSample\AdaptiveCardsSample.csproj", "{E154C5BE-ED70-4D57-8483-00F93EB10FCE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{000868B8-53DA-45EF-808F-6CE5D205948A}"
+	ProjectSection(SolutionItems) = preProject
+		inputform.json = inputform.json
+		openurl.json = openurl.json
+		productVideo.json = productVideo.json
+		rzlSample.json = rzlSample.json
+		weather.json = weather.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
