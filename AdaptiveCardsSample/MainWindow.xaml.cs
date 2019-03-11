@@ -2,6 +2,7 @@
 using AdaptiveCards.Rendering;
 using AdaptiveCards.Rendering.Wpf;
 using Microsoft.Win32;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
@@ -35,9 +36,6 @@ namespace AdaptiveCardsSample
 
         private void OnShowCard(object sender, RoutedEventArgs e)
         {
-            void showSubmitAction(RenderedAdaptiveCard card, AdaptiveSubmitAction action)
-            { }
-
             var renderer = new AdaptiveCardRenderer(_hostconfig);
             var version = renderer.SupportedSchemaVersion;
             // renderer.UseXceedElementRenderers();
@@ -55,6 +53,17 @@ namespace AdaptiveCardsSample
                 {
                     case AdaptiveOpenUrlAction openUrlAction:
                         Process.Start(openUrlAction.Url.ToString());
+                        break;
+
+                    case AdaptiveShowCardAction showCardAction:
+                        // Eine weitere Adaptive Card anzeigen
+                        // Inline oder als Popup
+                        break;
+
+                    case AdaptiveSubmitAction submitAction:
+                        var inputs = card.UserInputs.AsJson();
+                        inputs.Merge(submitAction.Data);
+                        MessageBox.Show(this, JsonConvert.SerializeObject(inputs, Formatting.Indented), "SubmitAction");
                         break;
                 }
             };
