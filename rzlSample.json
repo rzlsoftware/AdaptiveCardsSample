@@ -1,0 +1,82 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "text": "RZL Lohn News"
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "style": "Person",
+                                    "url": "https://yt3.ggpht.com/a-/AAuE7mC-h6lkBvQgm_Nr7UDA8_Y7-IMuqszq5brYyw=s900-mo-c-c0xffffffff-rj-k-no",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto"
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "weight": "Bolder",
+                                    "text": "Verena",
+                                    "wrap": true
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "spacing": "None",
+                                    "text": "{{DATE(2019-02-14T06:08:39Z,SHORT)}}",
+                                    "isSubtle": true,
+                                    "wrap": true
+                                }
+                            ],
+                            "width": "stretch"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "SV-Clearing"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Die Lohn- / Gehaltsverrechnung hat für das Jahr 2019 viele Änderungen gebracht.\nWir bekommen zur Zeit vermehrt Supportanrufe zu vielen Neuerungen der Lohnverrechnung, durch das erhöhte Aufkommen dieser Fragen kann es auch zu längeren Wartezeiten am Telefon bzw. zu untypisch längeren Beantwortungszeiten von E-Mails kommen.\n",
+                    "wrap": true
+                },
+                {
+                    "type": "Image",
+                    "url": "https://neu.rzlsoftware.at/fileadmin/_processed_/1/0/csm_LOHN_Bildschirm_42ccd13103.png"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Mehr Informationen",
+            "url": "neu.rzlsoftware.at"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0"
+}
+
